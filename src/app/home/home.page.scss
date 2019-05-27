@@ -1,0 +1,31 @@
+ion-content {
+  --ion-background-color: #0a0a2a;
+}
+
+ion-title,
+ion-card-subtitle {
+  padding: 5px;
+  font-family: "Lobster", cursive;
+  color: white;
+  text-align: center;
+}
+
+ion-header {
+  --ion-background-color: #0a0a2a;
+}
+
+i {
+  color: #ffffff;
+  margin-top:10px;
+  display: inline;
+  position: absolute;
+  left: 95px;
+}
+
+#icon2 {
+  color: white;
+  margin-top: 10px;
+  display: inline;
+  position: absolute;
+  left: 250px;
+}

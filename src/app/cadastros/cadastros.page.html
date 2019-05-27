@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon style="color: white; font-size: 25px" name="arrow-round-back" slot="start" (click)="backToHome()">
+    </ion-icon>
+    <ion-title>Cadastros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col>
+        <ion-icon name="person-add"></ion-icon>
+        Cadastrar Usuário
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row (click)="goToNovoCliente()">
+      <ion-col>
+        <i class="fas fa-restroom"></i>
+        Cadastrar Clientes
+      </ion-col>
+    </ion-row>
+
+    <ion-row (click)="goToNovaCategoria()">
+      <ion-col>
+        <ion-icon name="paper"></ion-icon>
+        Cadastrar Categorias
+      </ion-col>
+    </ion-row>
+
+    <ion-row (click)="goToNovoProduto()">
+      <ion-col>
+        <ion-icon name="list-box"></ion-icon>
+        Cadastrar Produtos
+      </ion-col>
+    </ion-row>
+
+    <ion-row (click)="goToNovaDespesa()">
+      <ion-col>
+        <i class="fas fa-cash-register"></i>
+        Cadastrar Despesas
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

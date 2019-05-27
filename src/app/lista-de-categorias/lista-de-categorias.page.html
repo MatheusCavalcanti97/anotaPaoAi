@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon style="color: white; font-size: 25px" name="arrow-round-back" slot="start" (click)="backToListas()">
+    </ion-icon>
+    <ion-title>Lista de Categorias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+  <div *ngIf="!Carregando">
+    <ion-card *ngFor="let categoriaProduto of listaDeCategorias">
+      <ion-item>
+        <ion-label>{{ categoriaProduto.nomeCategoria }}</ion-label>
+
+        <i class="fas fa-edit"></i>
+        <i class="fas fa-trash" (click)="deleteMensagem(categoriaProduto.uIDCategoriaProduto)"></i>
+      </ion-item>
+
+      <ion-card-content>{{ categoriaProduto.descricaoCategoria }}</ion-card-content>
+
+    </ion-card>
+  </div>
+
+  <div *ngIf="loading" class="iconLoading">
+    <i class="fas fa-spinner"></i>
+  </div>
+</ion-content>

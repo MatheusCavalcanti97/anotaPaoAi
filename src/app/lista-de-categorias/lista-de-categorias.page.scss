@@ -1,0 +1,80 @@
+ion-content {
+  --ion-background-color: #0a0a2a;
+}
+
+ion-header {
+  --ion-background-color: #0a0a2a;
+}
+
+ion-title {
+  padding: 5px;
+  font-family: "Lobster", cursive;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+
+ion-item{
+  font-family: "Lobster", cursive;
+  color: white;
+  font-size: 15px;
+}
+
+ion-content-card {
+  text-indent:1em; 
+  align-items: center;
+}
+
+
+p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+i{
+  display: inline; 
+  margin-right: 30px;
+  padding: 10px;
+  font-size: 14px;
+  margin-right: 5px;
+  background-color: yellowgreen;
+  align-items: center;
+  transition: all .2s;
+  visibility: visible;
+}
+
+i:hover{
+  background-color: red;
+  transition: all .2s;
+  visibility: visible;
+}
+
+.iconLoading{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.iconLoading i{
+  display: inline-block;
+  background-color: transparent;
+  color: white;
+  font-size: 50px;
+  animation: iconLoading 1.1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+@keyframes iconLoading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+

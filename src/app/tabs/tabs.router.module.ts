@@ -1,3 +1,11 @@
+import { LoginPage } from './../login/login.page';
+import { LoginPageModule } from './../login/login.module';
+import { ConfiguracoesPageModule } from './../configuracoes/configuracoes.module';
+import { CadastrosPageModule } from './../cadastros/cadastros.module';
+import { ListasPageModule } from './../listas/listas.module';
+import { HomePageModule } from './../home/home.module';
+
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
@@ -8,42 +16,51 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'home',
         children: [
           {
             path: '',
-            loadChildren: '../tab1/tab1.module#Tab1PageModule'
+            loadChildren: '../home/home.module#HomePageModule'
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'cadastros',
         children: [
           {
             path: '',
-            loadChildren: '../tab2/tab2.module#Tab2PageModule'
+            loadChildren: '../cadastros/cadastros.module#CadastrosPageModule'
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'listas',
         children: [
           {
             path: '',
-            loadChildren: '../tab3/tab3.module#Tab3PageModule'
+            loadChildren: '../listas/listas.module#ListasPageModule'
+          }
+        ]
+      },
+      {
+        path: 'configuracoes',
+        children: [
+          {
+            path: '',
+            loadChildren: '../configuracoes/configuracoes.module#ConfiguracoesPageModule'
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/login',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/login',
     pathMatch: 'full'
   }
 ];

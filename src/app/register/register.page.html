@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon  style="color: white; font-size: 25px" name="arrow-round-back" slot="start" (click)="backToLogin()"></ion-icon>
+    <ion-title style="color:white">Realizar Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <h3>Login</h3>
+    <ion-item>
+      <ion-icon name="contact" slot="start"></ion-icon>
+      <ion-input [(ngModel)]="email" placeholder="E-mail"></ion-input>
+    </ion-item>
+
+    <h3>Senha</h3>
+    <ion-item>
+      <ion-icon name="unlock" slot="start"></ion-icon>
+      <ion-input [(ngModel)]="senha" placeholder="Senha" type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div class="botoes">
+    <ion-button color="light" (click)="register()">CADASTRAR</ion-button>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Anota Pão Aí</ion-title>
+  </ion-toolbar>
+</ion-footer>

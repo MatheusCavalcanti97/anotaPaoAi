@@ -1,0 +1,33 @@
+<ion-content padding>
+
+  <div class="foto-conteudo">
+    <img src="./../../assets/imagens/padaria-logo-02.png" alt="" />
+  </div>
+
+
+  <ion-list>
+    <h3>Login</h3>
+    <ion-item>
+      <ion-icon name="contact" slot="start"></ion-icon>
+      <ion-input [(ngModel)]="email" placeholder="E-mail"></ion-input>
+    </ion-item>
+
+    <h3>Senha</h3>
+    <ion-item>
+      <ion-icon name="unlock" slot="start"></ion-icon>
+      <ion-input [(ngModel)]="senha" placeholder="Senha" type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-label (click)="register()">Não Possui Conta? Cadastre-se</ion-label>
+
+  <div class="botoes">
+  
+  <ion-button color="light"><ion-icon name="logo-facebook" slot="start"></ion-icon> Facebook</ion-button>
+
+    <ion-button color="light" (click)="login()" id="logarButton">Logar</ion-button>
+    
+    <ion-button color="light"><ion-icon name="logo-google" slot="start"></ion-icon> Google</ion-button>
+  </div>
+
+</ion-content>

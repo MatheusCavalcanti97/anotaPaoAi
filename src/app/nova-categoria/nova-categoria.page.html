@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon style="color: white; font-size: 25px" name="arrow-round-back" slot="start" (click)="backToCadastros()">
+    </ion-icon>
+    <ion-title>Cadastre uma Nova Categoria</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col>
+        <h3>Informe o tipo da Categoria</h3>
+        <ion-input [(ngModel)]="novaCategoria.nomeCategoria" placeholder="Digite a Categoria a ser Inserida">
+        </ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <h3>Informe a Descrição da Categoria</h3>
+        <ion-input [(ngModel)]="novaCategoria.descricaoCategoria"
+          placeholder="Digite a Descrição da Categoria a ser Inserida"></ion-input>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <div class="botoes">
+    <ion-button color="light" (click)="insert()">Inserir</ion-button>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button color="light">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top" (click)="toGoNovoNewProduto()">
+      <h3 style="color: white; font-family: Lobster, cursive; font-size: 10px; text-align: center;"> Adicione um Produto
+      </h3>
+      <ion-fab-button>
+        <ion-icon name="paper"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+
+  </ion-fab>
+
+
+
+</ion-content>
