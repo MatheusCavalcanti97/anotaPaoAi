@@ -1,6 +1,6 @@
 export class CategoriaProduto{
 
-    uIDCategoriaProduto : string;
+    uid : string;
     nomeCategoria : String;
     descricaoCategoria :  string;
 }

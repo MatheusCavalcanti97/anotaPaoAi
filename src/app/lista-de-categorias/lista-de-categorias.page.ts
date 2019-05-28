@@ -40,7 +40,7 @@ export class ListaDeCategoriasPage implements OnInit {
       });
   }
 
-  async deleteMensagem(uIDCategoriaProduto: string) {
+  async deleteMensagem(categoria: CategoriaProduto) {
     const alert = await this.alertController.create({
       header: 'Atenção',
       message: 'Deseja Deletar esta Categoria? ',
@@ -52,7 +52,7 @@ export class ListaDeCategoriasPage implements OnInit {
         {
           text: 'Confirmar',
           handler: () => {
-            this.remove(uIDCategoriaProduto);
+            this.remove(categoria);
           }
         }
       ]
@@ -60,9 +60,9 @@ export class ListaDeCategoriasPage implements OnInit {
     await alert.present();
   }
 
-  remove(uIDCategoriaProduto: string) {
-    this.dbService.remove('/categoriaProduto', uIDCategoriaProduto)
-    .then(() =>{
+  remove(categoria:CategoriaProduto) {
+    this.dbService.remove('/categoriaProduto', categoria.uid)
+    .then((resultado) =>{
       this.loadListaDeCategorias();
     })
   }
