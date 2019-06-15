@@ -1,6 +1,8 @@
 export class Usuario {
 
-    uIDUsuario : String;
+    uidsuario : string;
+    email : string;
+    senha : string;
     tipoUsuario: string;
     
 }

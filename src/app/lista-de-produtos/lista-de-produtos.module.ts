@@ -1,3 +1,4 @@
+import { UpdateProdutoPage } from './../update-produto/update-produto.page';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -14,13 +15,14 @@ const routes: Routes = [
   }
 ];
 
-@NgModule({
+@NgModule({ 
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild([{ path: '', component: ListaDeProdutosPage }])
   ],
-  declarations: [ListaDeProdutosPage]
+  declarations: [ListaDeProdutosPage, UpdateProdutoPage],
+  entryComponents : [UpdateProdutoPage]
 })
 export class ListaDeProdutosPageModule {}

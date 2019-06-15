@@ -1,10 +1,81 @@
 <ion-header>
   <ion-toolbar>
-      <ion-icon  style="color: white; font-size: 25px" name="arrow-round-back" slot="start" (click)="backToCadastros()"></ion-icon>
-    <ion-title>Adicione um Cliente</ion-title>
+      <ion-icon style="color: white; font-size: 25px" name="arrow-round-back" slot="start"
+      (click)="backToPageDoCliente()"></ion-icon>
+      <ion-title>Adicione um Cliente</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+
+  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h3> <i class="fas fa-circle"></i> Informe o Nome Completo do Cliente:</h3>
+        <ion-input  placeholder="Digite o NOME COMPLETO do Cliente">
+        </ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h3> <i class="fas fa-circle"></i> Informe o Número de Identidade do Cliente:</h3>
+        <ion-input 
+          placeholder="Digite o NÚMERO DA IDENTIDADE do Cliente"></ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h3> <i class="fas fa-circle"></i> Informe o Número de CPF do Cliente:</h3>
+          <ion-input 
+            placeholder="Digite o NÚMERO DO CPF do Cliente"></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h3> <i class="fas fa-circle"></i> Informe a Data de Nascimento do Cliente:</h3>
+            <ion-input 
+              placeholder="Digite a DATA DE NASCIMENTO do Cliente"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+          <ion-row>
+            <ion-col>
+              <h3> <i class="fas fa-circle"></i> Informe o Endereço do Cliente:</h3>
+              <ion-input 
+                placeholder="Digite o ENDEREÇO do Cliente"></ion-input>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+      <ion-grid>
+          <ion-row>
+            <ion-col>
+              <h3> <i class="fas fa-circle"></i> Informe a Data de Cadastro do Cliente:</h3>
+              <ion-input 
+                placeholder="Digite a DATA DE CADASTRO do Cliente"></ion-input>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+ 
+  <div class="botoes">
+    <ion-button color="danger">Inserir</ion-button>
+  </div>
 
 </ion-content>

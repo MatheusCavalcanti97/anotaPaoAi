@@ -1,6 +1,6 @@
 export class Endereco{
 
-    uIDEndereco : string;
+    uid : string;
     estado : string;
     cidade: string;
     cep : string;

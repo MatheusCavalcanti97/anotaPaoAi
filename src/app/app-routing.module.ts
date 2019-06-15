@@ -4,8 +4,6 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
-  { path: 'listas', loadChildren: './listas/listas.module#ListasPageModule' },
-  { path: 'cadastros', loadChildren: './cadastros/cadastros.module#CadastrosPageModule' },
   { path: 'configuracoes', loadChildren: './configuracoes/configuracoes.module#ConfiguracoesPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
@@ -19,7 +17,15 @@ const routes: Routes = [
   { path: 'lista-de-produtos', loadChildren: './lista-de-produtos/lista-de-produtos.module#ListaDeProdutosPageModule' },
   { path: 'lista-de-clientes', loadChildren: './lista-de-clientes/lista-de-clientes.module#ListaDeClientesPageModule' },
   { path: 'despesas', loadChildren: './despesas/despesas.module#DespesasPageModule' },
-  { path: 'lista-de-despesas', loadChildren: './lista-de-despesas/lista-de-despesas.module#ListaDeDespesasPageModule' }
+  { path: 'lista-de-despesas', loadChildren: './lista-de-despesas/lista-de-despesas.module#ListaDeDespesasPageModule' },
+  { path: 'update-categoria', loadChildren: './update-categoria/update-categoria.module#UpdateCategoriaPageModule' },
+  { path: 'categorias-app', loadChildren: './categorias-app/categorias-app.module#CategoriasAppPageModule' },
+  { path: 'page-do-cliente', loadChildren: './page-do-cliente/page-do-cliente.module#PageDoClientePageModule' },
+  { path: 'page-do-administrador', loadChildren: './page-do-administrador/page-do-administrador.module#PageDoAdministradorPageModule' },
+  { path: 'page-do-produto', loadChildren: './page-do-produto/page-do-produto.module#PageDoProdutoPageModule' },
+  { path: 'page-da-categoria-produto', loadChildren: './page-da-categoria-produto/page-da-categoria-produto.module#PageDaCategoriaProdutoPageModule' },
+  { path: 'page-da-venda', loadChildren: './page-da-venda/page-da-venda.module#PageDaVendaPageModule' },
+  { path: 'update-produto', loadChildren: './update-produto/update-produto.module#UpdateProdutoPageModule' }
 ];
 @NgModule({
   imports: [

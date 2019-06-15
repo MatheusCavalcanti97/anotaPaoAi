@@ -1,22 +1,22 @@
+import { UpdateCategoriaPage } from './../update-categoria/update-categoria.page';
 import { CategoriaProduto } from './../model/CategoriaProduto';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DBService } from '../services/db.services';
 import { AlertController } from '@ionic/angular';
-
+import { ModalController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-lista-de-categorias',
   templateUrl: './lista-de-categorias.page.html',
   styleUrls: ['./lista-de-categorias.page.scss'],
 })
-export class ListaDeCategoriasPage implements OnInit {
+export class ListaDeCategoriasPage{
 
   listaDeCategorias: CategoriaProduto[];
   loading: boolean;
 
-
-  constructor(private router: Router,
+  constructor(public modalController: ModalController, public toastController: ToastController, private router: Router,
     private dbService: DBService,
     public alertController: AlertController) {
     this.init();
@@ -27,7 +27,8 @@ export class ListaDeCategoriasPage implements OnInit {
 
   private async init() {
     this.loading = true;
-    await this.loadListaDeCategorias();
+    this.dbService.listAndWatch('/categoriaProduto')
+      .subscribe(data => this.loadListaDeCategorias());
   }
 
   private async loadListaDeCategorias() {
@@ -40,7 +41,7 @@ export class ListaDeCategoriasPage implements OnInit {
       });
   }
 
-  async deleteMensagem(categoria: CategoriaProduto) {
+  async deleteMensagem(categoriaProduto: CategoriaProduto) {
     const alert = await this.alertController.create({
       header: 'Atenção',
       message: 'Deseja Deletar esta Categoria? ',
@@ -52,7 +53,7 @@ export class ListaDeCategoriasPage implements OnInit {
         {
           text: 'Confirmar',
           handler: () => {
-            this.remove(categoria);
+            this.remove(categoriaProduto);
           }
         }
       ]
@@ -60,15 +61,46 @@ export class ListaDeCategoriasPage implements OnInit {
     await alert.present();
   }
 
-  remove(categoria:CategoriaProduto) {
-    this.dbService.remove('/categoriaProduto', categoria.uid)
-    .then((resultado) =>{
-      this.loadListaDeCategorias();
-    })
+  async edicaoDeCategoria(categoriaProduto: CategoriaProduto) {
+    const modal = await this.modalController.create({
+      component: UpdateCategoriaPage,
+      componentProps: {
+        editarCategoria: categoriaProduto
+      }
+    });
+
+    modal.onDidDismiss()
+      .then(result => {
+        if (result.data) {
+          this.confirmarEdicaoCategoria();
+        }
+      });
+
+    return await modal.present();
   }
 
-  backToListas() {
-    this.router.navigate(["/listas"]);
+  private confirmarEdicaoCategoria() {
+    this.presentToast('Categoria Editada com sucesso');
+    this.loadListaDeCategorias();
+  }
+
+  async presentToast(message: string) {
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 2000
+    });
+    toast.present();
+  }
+
+  remove(categoriaProduto: CategoriaProduto) {
+    this.dbService.remove('/categoriaProduto', categoriaProduto.uid)
+      .then((resultado) => {
+        this.loadListaDeCategorias();
+      })
+  }
+
+  backToPageDaCategoria() {
+    this.router.navigate(['/page-da-categoria-produto']);
   }
 
 }

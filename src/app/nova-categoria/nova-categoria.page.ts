@@ -1,4 +1,5 @@
 import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
 import { DBService } from './../services/db.services';
 import { CategoriaProduto } from './../model/CategoriaProduto';
 import { Component, OnInit } from '@angular/core';
@@ -13,11 +14,14 @@ export class NovaCategoriaPage implements OnInit {
   editeCategoria: CategoriaProduto;
   novaCategoria: CategoriaProduto;
 
-  constructor(private router: Router, private dbService: DBService) {
+  constructor(public modalController: ModalController, private router: Router, private dbService: DBService) {
     this.novaCategoria = new CategoriaProduto();
   }
 
   ngOnInit() {
+    if (this.editeCategoria) {
+      this.novaCategoria = this.editeCategoria;
+    }
   }
 
   async insert() {
@@ -25,12 +29,9 @@ export class NovaCategoriaPage implements OnInit {
     this.novaCategoria = new CategoriaProduto();
   }
 
-  backToCadastros() {
-    this.router.navigate(['/cadastros']);
+  backToPageDaCategoria(){
+    this.router.navigate(['/page-da-categoria-produto']);
   }
 
-  toGoNovoNewProduto() {
-    this.router.navigate(['/novo-produto']);
-  }
 
 }

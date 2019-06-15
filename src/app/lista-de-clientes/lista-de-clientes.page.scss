@@ -1,13 +1,12 @@
- ion-content {
-  --ion-background-color: #0a0a2a;
+ion-content {
+  --ion-background-color: white;
 }
 
 ion-header {
-  --ion-background-color: #0a0a2a;
+  --ion-background-color: rgb(247, 62, 16);
 }
 
 ion-title {
-  padding: 5px;
   font-family: "Lobster", cursive;
   color: white;
   text-align: center;

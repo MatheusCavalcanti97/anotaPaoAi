@@ -1,4 +1,3 @@
-import { CadastrosPage } from './../cadastros/cadastros.page';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -14,8 +13,8 @@ export class NovoClientePage implements OnInit {
   ngOnInit() {
   }
 
-  backToCadastros() {
-    this.router.navigate(['/cadastros']);
+  backToPageDoCliente(){
+    this.router.navigate(['/page-do-cliente']);
   }
 
 }

@@ -1,3 +1,5 @@
+import { UpdateCategoriaPage } from './../update-categoria/update-categoria.page';
+import { NovaCategoriaPage } from './../nova-categoria/nova-categoria.page';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -19,8 +21,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild([{ path: '', component: ListaDeCategoriasPage }])
   ],
-  declarations: [ListaDeCategoriasPage]
+  declarations: [ListaDeCategoriasPage, UpdateCategoriaPage],
+  entryComponents : [UpdateCategoriaPage]
 })
-export class ListaDeCategoriasPageModule {}
+export class ListaDeCategoriasPageModule { }

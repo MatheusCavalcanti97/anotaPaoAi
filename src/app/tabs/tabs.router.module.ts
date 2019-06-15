@@ -1,8 +1,7 @@
+import { CategoriasAppPageModule } from './../categorias-app/categorias-app.module';
 import { LoginPage } from './../login/login.page';
 import { LoginPageModule } from './../login/login.module';
 import { ConfiguracoesPageModule } from './../configuracoes/configuracoes.module';
-import { CadastrosPageModule } from './../cadastros/cadastros.module';
-import { ListasPageModule } from './../listas/listas.module';
 import { HomePageModule } from './../home/home.module';
 
 
@@ -25,20 +24,11 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'cadastros',
+        path: 'categorias-app',
         children: [
           {
             path: '',
-            loadChildren: '../cadastros/cadastros.module#CadastrosPageModule'
-          }
-        ]
-      },
-      {
-        path: 'listas',
-        children: [
-          {
-            path: '',
-            loadChildren: '../listas/listas.module#ListasPageModule'
+            loadChildren: '../categorias-app/categorias-app.module#CategoriasAppPageModule'
           }
         ]
       },

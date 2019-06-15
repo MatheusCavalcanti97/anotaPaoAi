@@ -1,10 +1,10 @@
 export class Cliente{
 
-    uIDCliente : string;
+    uid : string;
     nomeCliente : string;
     identidade : string;
     cpf : string;
-    dataNascimento : String;
+    dataNascimento : string;
+    endereco : string;
     dataDeCadastro : string;
-
 }

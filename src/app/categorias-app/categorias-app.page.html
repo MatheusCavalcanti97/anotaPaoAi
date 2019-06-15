@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon style="color: white; font-size: 25px" name="arrow-round-back" slot="start" (click)="backToHome()"></ion-icon>
+      <ion-title>Categorias do App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <ion-item (click)="toGoPageDoAdministrador()">
+    <i class="fas fa-circle"></i>
+    <ion-label>
+      Administrador
+    </ion-label>
+    <ion-icon name="arrow-round-forward" slot="end"></ion-icon>
+  </ion-item>
+
+  <ion-item (click)="toGoPageDoCliente()">
+    <i class="fas fa-circle"></i>
+    <ion-label>
+      Cliente
+    </ion-label>
+    <ion-icon name="arrow-round-forward" slot="end"></ion-icon>
+  </ion-item>
+
+  <ion-item (click)="toGoPageDoProduto()">
+    <i class="fas fa-circle"></i>
+    <ion-label>
+      Produto
+    </ion-label>
+    <ion-icon name="arrow-round-forward" slot="end"></ion-icon>
+  </ion-item>
+
+  <ion-item (click)="toGoPageDaCategoriaDoProduto()">
+    <i class="fas fa-circle"></i>
+    <ion-label>
+      Categoria Produto
+    </ion-label>
+    <ion-icon name="arrow-round-forward" slot="end"></ion-icon>
+  </ion-item>
+
+  <ion-item (click)="toGoPageDaVenda()">
+    <i class="fas fa-circle"></i>
+    <ion-label>
+      Vendas
+    </ion-label>
+    <ion-icon name="arrow-round-forward" slot="end"></ion-icon>
+  </ion-item>
+
+</ion-content>

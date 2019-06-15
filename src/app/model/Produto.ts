@@ -1,7 +1,7 @@
 export class Produto{
 
-    uIDProduto : string;
+    uid : string;
+    uidCP : string;
     nomeProduto : string;
-    quantidadeProduto : number;
     precoProduto : number;
 }

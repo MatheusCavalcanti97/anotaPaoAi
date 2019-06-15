@@ -1,15 +1,63 @@
 ion-content {
-    --ion-background-color: #0a0a2a;
-  }
-  
-  ion-header {
-    --ion-background-color: #0a0a2a;
-  }
-  
-  ion-title {
-    font-family: "Lobster", cursive;
-    color: white;
-    text-align: center;
-    font-size: 18px;
-  }
-  
+  --ion-background-color:white;
+}
+
+ion-header {
+  --ion-background-color: rgb(247, 62, 16);
+}
+
+ion-title {
+  font-family: "Lobster", cursive;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+} 
+
+ion-grid {
+  margin: 5px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+ion-row {
+  padding: 5px;
+  font-family: "Lobster", cursive;
+  color: black;
+}
+
+h3 {
+  font-family: "Lobster", cursive;
+  color: black;
+  font-size: 14px;
+}
+
+ion-col, h3{
+  font-family: "Lobster", cursive;
+  color: black;
+  font-size: 14px;
+}
+
+ion-input{
+  --ion-border: 1px 1px 1px 1px black;
+}
+
+ion-button {
+  margin: 1vh;
+  width: 120px;
+  height: 50px;
+  margin: 5px 5px;
+  top: 10px;
+  font-size: 11px;
+  margin-bottom: 5px;
+  font-family: "Lobster", cursive;
+}
+
+.botoes {
+  margin-top: 150px;
+  padding-right: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
