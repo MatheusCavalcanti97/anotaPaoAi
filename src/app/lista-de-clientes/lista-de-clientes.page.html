@@ -1,11 +1,35 @@
 <ion-header>
   <ion-toolbar>
-    <ion-icon style="color: white; font-size: 25px" name="arrow-round-back" slot="start" (click)="backToListas()">
+    <ion-icon style="color: white; font-size: 25px" name="arrow-round-back" slot="start" (click)="backToPageDoCliente()">
     </ion-icon>
     <ion-title>Lista de Clientes</ion-title>
   </ion-toolbar>
 </ion-header> 
 
 <ion-content>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+    <div *ngIf="!Carregando">
+      <ion-card *ngFor="let cliente of listaDeClientes">
+        <h3>Nome da Cliente</h3>
+        <ion-item>
+          <ion-label>{{ cliente.nomeCliente }}</ion-label>
+          <i class="fas fa-edit" (click)="edicaoDeCliente(cliente)"></i>
+          <i class="fas fa-trash" (click)="deleteMensagem(cliente)"></i>
+
+        </ion-item>
+
+        <ion-card-content><h4>Descrição:</h4> </ion-card-content>
+
+      </ion-card>
+    </div>
+ 
+    
+  <div *ngIf="loading" class="iconLoading">
+      <i class="fas fa-spinner"></i>
+    </div>
 
 </ion-content>

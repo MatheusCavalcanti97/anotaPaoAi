@@ -1,21 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-icon style="color: black; font-size: 25px" name="arrow-round-back" slot="start"
-      (click)="backToPageDoCliente()"></ion-icon>
-    <ion-title>Adicione um Cliente</ion-title>
+      <ion-icon style="color: white; font-size: 25px" name="arrow-round-back" slot="start" (click)="voltarParaListaDeClientes()">
+        </ion-icon>
+    <ion-title>Atualizar Info. do Cliente</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
 
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 
   <ion-grid>
 
     <ion-header align-items-center>
-      <ion-title>Inserir Info. sobre o Cliente</ion-title>
+      <ion-title>Atualize Info. do Cliente</ion-title>
     </ion-header>
 
     <ion-row>
@@ -58,7 +58,7 @@
 
     <ion-grid>
         <ion-header align-items-center>
-            <ion-title>Insirir Datas</ion-title>
+            <ion-title>Atualize Datas</ion-title>
           </ion-header>
 
       <ion-col style="height: 70px;">
@@ -83,7 +83,7 @@
     </ion-grid>
 
   <div class="botoes">
-    <ion-button color="light" (click)="insert()">Inserir</ion-button>
+    <ion-button color="light" (click)="edicaoDeCliente()">Atualizar Cliente</ion-button>
   </div>
 
 </ion-content>

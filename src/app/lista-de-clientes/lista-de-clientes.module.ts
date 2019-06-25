@@ -1,3 +1,4 @@
+import { UpdateClientePage } from './../update-cliente/update-cliente.page';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -19,8 +20,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild([{ path: '', component: ListaDeClientesPage }])
   ],
-  declarations: [ListaDeClientesPage]
+  declarations: [ListaDeClientesPage, UpdateClientePage],
+  entryComponents : [UpdateClientePage]
 })
 export class ListaDeClientesPageModule {}

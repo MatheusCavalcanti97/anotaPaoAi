@@ -4,7 +4,8 @@ export class Cliente{
     nomeCliente : string;
     identidade : string;
     cpf : string;
-    dataNascimento : string;
+    cidade : string;
     endereco : string;
-    dataDeCadastro : string;
+    dataNascimento : number;
+    dataDeCadastro : number;
 }

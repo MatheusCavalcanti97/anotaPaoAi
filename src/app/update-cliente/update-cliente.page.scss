@@ -1,0 +1,61 @@
+ion-content {
+    --ion-background-color:white;
+  }
+  
+  ion-header {
+    --ion-background-color: rgb(247, 62, 16);
+  }
+  
+  ion-title {
+    font-family: "Lobster", cursive;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+  } 
+
+  ion-icon{
+    color: white;
+  }
+  
+  ion-grid {
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  ion-row {
+    padding: 5px;
+    font-family: "Lobster", cursive;
+    color: black;
+  }
+  
+  h3 {
+    font-size: 15px;
+    font-family: "Lobster", cursive;
+    color:black;
+  }
+  
+  ion-input{
+    --ion-border: 1px 1px 1px 1px black;
+  }
+  
+  ion-button {
+    margin: 1vh;
+    width: 150px;
+    height: 50px;
+    margin: 5px 5px;
+    top: 10px;
+    font-size: 11px;
+    margin-bottom: 5px;
+    font-family: "Lobster", cursive;
+  }
+  
+  .botoes {
+    margin-top: 550px;
+    padding-right: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+  
